@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <script src="style/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="questions">
+            <h2 class="question" id="qtag"></h2>
+            <h1 class="answer" id="atag"></h1>
+        </div>
+
+        <div class="keyboard">
+            <div class="alfabet">
+            <div onclick="add(this)">ا</div>
+            <div onclick="add(this)">ب</div>
+            <div onclick="add(this)">پ</div>
+            <div onclick="add(this)">ت</div>
+            <div onclick="add(this)">ث</div>
+            <div onclick="add(this)">ج</div>
+            <div onclick="add(this)">چ</div>
+            <div onclick="add(this)">ح</div>
+            <div onclick="add(this)">خ</div>
+            <div onclick="add(this)">د</div>
+            <div onclick="add(this)">ذ</div>
+            <div onclick="add(this)">ر</div>
+            <div onclick="add(this)">ز</div>
+            <div onclick="add(this)">س</div>
+            <div onclick="add(this)">ش</div>
+            <div onclick="add(this)">ص</div>
+            <div onclick="add(this)">ض</div>
+            <div onclick="add(this)">ط</div>
+            <div onclick="add(this)">ظ</div>
+            <div onclick="add(this)">ع</div>
+            <div onclick="add(this)">غ</div>
+            <div onclick="add(this)">ف</div>
+            <div onclick="add(this)">ق</div>
+            <div onclick="add(this)">ک</div>
+            <div onclick="add(this)">گ</div>
+            <div onclick="add(this)">ل</div>
+            <div onclick="add(this)">م</div>
+            <div onclick="add(this)">ن</div>
+            <div onclick="add(this)">و</div>
+            <div onclick="add(this)">ه</div>
+            <div onclick="add(this)">ی</div>
+            <div onclick="add(this)">ئ</div>
+            </div>
+
+            <button class="int-clr" onclick="check()" id="cck">اعمال</button>
+            <button class="int-clr" onclick="clear()" id="clr">پاک کردن</button>
+            <button class="int-clr" onclick="start()" id="strt">شروع</button>
+        </div>
+
+        <div class="are" id="yes">
+            <div>
+                <h1>آورین</h1>
+                <input type="button" value="بعدی" id="nextbtn" onclick="next()">
+            </div>
+        </div>
+        <div class="na" id="no">
+            <h1>اشتباه زدی</h1>
+            <input type="button" value="یه بار دیگه" id="retrybtn" onclick="retry()">
+        </div>
+    </div>
+
+    <script>
+
+        let questions=["پادشاه بسکتبال","پرافتخار ترین تیم بسکتبال","لغب کوبی برایانت"]
+        let answers=["جیمز","لیکرز","مامبا"]
+        let C=0
+        let qhandle=document.getElementById("qtag")
+        let ahandle=document.getElementById("atag")
+        let yeshandle=document.getElementById("yes")
+        let nohandle=document.getElementById("no")
+        let nexthandle=document.getElementById("nextbtn")
+        let retryhandle=document.getElementById("retrybtn")
+        
+        function start(){
+            qhandle.innerText=questions[C]
+        }
+
+        function add(e){
+            if(qhandle.innerText==""){
+                alert("روی شروع کلیک کن")
+            }
+            else{
+                var atag= document.getElementById("atag")
+                atag.innerText=atag.innerText+e.innerText
+            }
+        }
+
+        function check(){
+            if(ahandle.innerText==answers[C]){
+                yeshandle.style.display="flex"
+                nohandle.style.display="none"
+                C++
+                if(C>2)
+                    C=0
+            }
+            else{
+                yeshandle.style.display="none"
+                nohandle.style.display="flex"
+            }
+        }
+
+        function next(){
+            qhandle.innerText=questions[C]
+            ahandle.innerText=""
+            yeshandle.style.display="none"
+        }
+
+        function retry(){
+            ahandle.innerText=""
+            nohandle.style.display="none"
+        }
+
+        function clear(){
+            ahandle.innerText=""
+        }
+    </script>
+
+</body>
+</html>

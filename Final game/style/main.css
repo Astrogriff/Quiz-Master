@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+.container {
+  height: fit-content;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 5px 7px 8px gray;
+  background-color: blueviolet;
+  margin: 0 auto;
+}
+
+.questions {
+  /* background-color: darkmagenta; */
+  height: 450px;
+  width: 600px;
+  padding: 80px 50px;
+}
+.questions h2 {
+  height: 100px;
+  width: 490px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding-top: 40px;
+}
+.questions h1 {
+  height: 90px;
+  width: 490px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 100px;
+  padding-top: 25px;
+}
+
+.keyboard {
+  background-color: rgb(22, 47, 94);
+  height: 350px;
+  width: 600px;
+  border-radius: 10px;
+}
+.keyboard .alfabet {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+}
+.keyboard .alfabet div {
+  height: 45px;
+  width: 60px;
+  border: 1px solid black;
+  background-color: cornflowerblue;
+  border-radius: 6px;
+  margin: 6px 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-size: 25px;
+}
+.keyboard .alfabet div:hover {
+  background-color: crimson;
+  color: aliceblue;
+}
+.keyboard .int-clr {
+  height: 50px;
+  width: 90px;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 0px 60px;
+  cursor: pointer;
+  background-color: darkgreen;
+}
+
+.are{
+  width: 600px;
+  height: 800px;
+  color: aliceblue;
+  font-size: 40px;
+  background-color: rgb(30, 63, 160);
+  border-radius: 10px;
+  z-index: 5;
+  position: fixed;
+  margin: -800px 0;
+  padding: 300px 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.are input{
+  padding: 12px 24px;
+  margin-top: 50px;
+  background-color: rgb(46, 115, 115);
+  color: #fdfdfd;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 24px;
+  transition: 0.5s ease;
+}
+.are input:hover {
+  background-color: #59146e;
+}
+
+.na{
+  width: 600px;
+  height: 800px;
+  color: aliceblue;
+  font-size: 40px;
+  background-color: rgb(30, 63, 160);
+  border-radius: 10px;
+  z-index: 5;
+  position: fixed;
+  margin: -800px 0;
+  padding: 300px 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.na input{
+  padding: 12px 24px;
+  margin-top: 50px;
+  background-color: rgb(46, 115, 115);
+  color: #fdfdfd;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 24px;
+  transition: 0.5s ease;
+}
+.na input:hover {
+  background-color: #59146e;
+}
